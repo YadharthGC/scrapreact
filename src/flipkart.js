@@ -6,7 +6,7 @@ function Flipkart() {
   const [list, setlist] = useState([]);
   useEffect(async () => {
     try {
-      let products = await axios.get("https://yadharthscrap.herokuapp.com/flip");
+      let products = await axios.get("https://yadharthfkscrap.herokuapp.com/");
       setlist([...products.data]);
     } catch (error) {}
   }, []);
