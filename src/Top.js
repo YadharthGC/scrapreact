@@ -5,6 +5,12 @@ function Searchbar() {
   return (
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
       <div className="input-group" id="nav">
+    <Link to="/">
+          <a className="nav-link collapsed">
+            <i className="fas fa-fw fa-cog"></i>
+            <span>home</span>
+          </a>
+        </Link>
         <Link to="/amazon">
           <a className="nav-link collapsed">
             <i className="fas fa-fw fa-cog"></i>
