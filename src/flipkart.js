@@ -34,7 +34,7 @@ function Flipkart() {
                   </div>
                   <div>
                     <span style={{ color: "white" }}> Brand:</span>
-                    <strong>{obj.brand}</strong>
+                    <strong>{obj.type}</strong>
                   </div>
                   <div>
                     <span style={{ color: "white" }}> offers:</span>
