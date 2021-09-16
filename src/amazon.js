@@ -7,7 +7,7 @@ function Amazon() {
   const [list, setlist] = useState([]);
   useEffect(async () => {
     try {
-      let products = await axios.get("https://yadharthscrap.herokuapp.com/amzn");
+      let products = await axios.get("https://yadharthamazonscrap.herokuapp.com/");
       setlist([...products.data]);
     } catch (error) {}
   }, []);
