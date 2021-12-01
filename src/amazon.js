@@ -5,16 +5,20 @@ import "./App.css";
 
 function Amazon() {
   const [list, setlist] = useState([]);
+  const[load,setload]=useState(true)
   useEffect(async () => {
     try {
       let products = await axios.get("https://yadharthamazonscrap.herokuapp.com/");
       setlist([...products.data]);
-    } catch (error) {}
+      setload(false);
+    } catch (error) {
+    setload(false);
+    }
   }, []);
 
   return (
     <div className="container-fluid" id="amazon">
-      <div>
+    {loading ? (<h3>Loading...</h3>):(<div>
         <h2 style={{ textAlign: "center" }}>Amazon Shirts</h2>
       </div>
       <div className="row ">
@@ -46,7 +50,7 @@ function Amazon() {
             </div>
           );
         })}
-      </div>
+      </div>)}
     </div>
   );
 }
